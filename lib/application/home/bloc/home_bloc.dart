@@ -14,6 +14,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   );
   HomeBloc() : super(MoviesInitial()) {
     on<HomeEvent>((event, emit) async {
+      
       if (event is MovieLoadEvent) {
         bool isInitial = movies.page == 1;
         isInitial

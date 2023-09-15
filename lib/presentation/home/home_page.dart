@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:platform_commons_machine_test/domain/home/models/movie_model.dart';
 
-import '../application/home/bloc/home_bloc.dart';
-import '../core/colors.dart';
-import '../widgets/widgets.dart';
+import '../../application/home/bloc/home_bloc.dart';
+import '../../core/colors.dart';
+import '../../widgets/widgets.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);

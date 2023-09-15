@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:platform_commons_machine_test/presentation/home_page.dart';
+import 'package:platform_commons_machine_test/application/overView/bloc/movie_details_bloc.dart';
+import 'package:platform_commons_machine_test/presentation/home/home_page.dart';
+import 'package:platform_commons_machine_test/presentation/moviedetails/movie_details_page.dart';
 
 import 'application/home/bloc/home_bloc.dart';
 
@@ -15,14 +17,22 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-      providers: [BlocProvider(create: (context) => HomeBloc())],
+      providers: [
+        BlocProvider(create: (context) => HomeBloc()),
+        BlocProvider(create: (context) => MovieDetailsBloc())
+      ],
       child: MaterialApp(
+        initialRoute: '/',
+        routes: {
+          '/': (context) => HomePage(),
+          '/movie_details': (context) => MovieDetailsPage(),
+        },
+        debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
             scaffoldBackgroundColor: Color.fromARGB(196, 9, 10, 14)),
-        home: HomePage(),
       ),
     );
   }
