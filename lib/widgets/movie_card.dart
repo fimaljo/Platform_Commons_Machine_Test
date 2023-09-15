@@ -1,4 +1,4 @@
-import 'package:cached_network_image/cached_network_image.dart';
+
 import 'package:flutter/material.dart';
 
 import 'package:platform_commons_machine_test/domain/home/models/movie_model.dart';

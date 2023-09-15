@@ -1,8 +1,9 @@
-import 'package:bloc/bloc.dart';
+
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../../domain/home/models/movie_model.dart';
 
-import '../../../domain/home/moviedetails/movie_details.dart';
+
 import '../../../infrastructure/moviedetails/movie_details_repo.dart';
 
 part 'movie_details_event.dart';

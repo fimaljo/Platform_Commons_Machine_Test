@@ -24,15 +24,15 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         initialRoute: '/',
         routes: {
-          '/': (context) => HomePage(),
-          '/movie_details': (context) => MovieDetailsPage(),
+          '/': (context) => const HomePage(),
+          '/movie_details': (context) => const MovieDetailsPage(),
         },
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
-            scaffoldBackgroundColor: Color.fromARGB(196, 9, 10, 14)),
+            scaffoldBackgroundColor: const Color.fromARGB(196, 9, 10, 14)),
       ),
     );
   }

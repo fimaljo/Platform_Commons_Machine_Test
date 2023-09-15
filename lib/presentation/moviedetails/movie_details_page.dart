@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:platform_commons_machine_test/application/overView/bloc/movie_details_bloc.dart';
 
 import '../../domain/home/models/movie_model.dart';
-import '../../domain/home/moviedetails/movie_details.dart';
+
 import '../../widgets/error_widget.dart';
 import '../../widgets/loading_widgets.dart';
 

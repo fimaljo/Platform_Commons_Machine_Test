@@ -12,7 +12,7 @@ class LoadingWidget extends StatelessWidget {
         child: ClipRRect(
           borderRadius: BorderRadius.circular(30),
           child: glassShimmerBuilder(
-            child: GlassContainer(
+            child: const GlassContainer(
               width: 200,
               height: 250,
               backgroundColor: Colors.blue,
@@ -29,7 +29,7 @@ class LoadingWidget extends StatelessWidget {
       gradient: LinearGradient(
         begin: Alignment.centerLeft,
         end: Alignment.centerRight,
-        stops: [0.0, 0.5, 1.0],
+        stops: const [0.0, 0.5, 1.0],
         colors: [
           Colors.grey.shade300
               .withOpacity(0.5), // Adjust opacity for the glass effect
@@ -49,7 +49,7 @@ class GlassContainer extends StatelessWidget {
   final double height;
   final Color backgroundColor;
 
-  GlassContainer({
+  const GlassContainer({super.key, 
     required this.width,
     required this.height,
     required this.backgroundColor,
@@ -118,7 +118,7 @@ class GlassContainer extends StatelessWidget {
       gradient: LinearGradient(
         begin: Alignment.centerLeft,
         end: Alignment.centerRight,
-        stops: [0.0, 0.5, 1.0],
+        stops: const [0.0, 0.5, 1.0],
         colors: [
           Colors.grey.shade300
               .withOpacity(0.5), // Adjust opacity for the glass effect
