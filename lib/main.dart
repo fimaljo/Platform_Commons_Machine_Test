@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:platform_commons_machine_test/presentation/products_page.dart';
+import 'package:platform_commons_machine_test/presentation/home_page.dart';
 
 import 'application/home/bloc/home_bloc.dart';
 
@@ -19,10 +19,10 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-        ),
-        home: ProductsPage(),
+            colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+            useMaterial3: true,
+            scaffoldBackgroundColor: Color.fromARGB(196, 9, 10, 14)),
+        home: HomePage(),
       ),
     );
   }

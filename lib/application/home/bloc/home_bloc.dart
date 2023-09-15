@@ -1,5 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:platform_commons_machine_test/infrastructure/movie_repo.dart';
+import 'package:platform_commons_machine_test/infrastructure/home/movie_repo.dart';
 
 import '../../../domain/home/models/movie_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';

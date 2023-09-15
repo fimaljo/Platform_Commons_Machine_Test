@@ -1,16 +1,16 @@
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 
-import '../core/failures.dart';
-import '../core/string.dart';
-import '../domain/home/models/movie_model.dart';
-import 'api_key.dart';
+import '../../core/error_model.dart';
+
+import '../../core/string.dart';
+import '../../domain/home/models/movie_model.dart';
+import '../api_key.dart';
 
 class MovieService {
-  static Future<Either<MainFailure, MovieModel>> getMovies(
+  static Future<Either<Failure, MovieModel>> getMovies(
       {required int page}) async {
     final Dio dio = Dio();
-
 
     try {
       final response = await dio.get(
@@ -24,16 +24,15 @@ class MovieService {
 
       if (response.statusCode == 200) {
         final Map<String, dynamic> json = response.data;
-        print(json);
+
         MovieModel movie = MovieModel.fromJson(json);
 
         return Right(movie);
       } else {
-        throw const Left(MainFailure.serverFailure());
+        return const Left(Failure(message: 'Failed to parse json response'));
       }
     } catch (e) {
-      
-      throw  const Left(MainFailure.clientFailure());
+      return const Left(Failure(message: 'Something went wrong'));
     }
   }
 }

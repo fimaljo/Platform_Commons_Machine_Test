@@ -58,7 +58,7 @@ class PaginationWidget<t> extends StatelessWidget {
       builder: (context, state) {
         if (state is MoviesLoaded) {
           List<MainData> products = state.movies.results;
-          print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ${products.length}");
+
           return NotificationListener<ScrollEndNotification>(
               onNotification: (scrollInfo) {
                 scrollInfo.metrics.pixels == scrollInfo.metrics.maxScrollExtent
