@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:platform_commons_machine_test/application/overView/bloc/movie_details_bloc.dart';
+import 'package:platform_commons_machine_test/application/moviedetails/bloc/movie_details_bloc.dart';
 
 import '../../domain/home/models/movie_model.dart';
 

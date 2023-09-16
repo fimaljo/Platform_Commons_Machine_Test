@@ -29,7 +29,7 @@ class MovieDetailsRepository {
         return const Left(Failure(message: 'Failed to fetch movie details'));
       }
     } catch (e) {
-      print(e);
+    
       return const Left(Failure(message: 'Something went wrong'));
     }
   }
